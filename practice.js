@@ -37,11 +37,9 @@ var groceries = ["apples", "milk", "eggs", "bread"];
 //doubleCheck should return the array.
 
 function doubleCheck(arr){
-  for(var i=0; i < arr.length; i++){
-    if(arr[i] !== "chocolate"){
+    if(!arr.includes("chocolate")){
       arr.push("chocolate");
     }
-  }
   return arr;
 }
 
@@ -53,8 +51,8 @@ function doubleCheck(arr){
 //and goodBoy (a boolean).
 
 var dog = {
-  name: roo,
-  color: brown,
+  name: "roo",
+  color: "brown",
   age: 4,
   goodBoy: true
 };
@@ -87,9 +85,7 @@ var ruff = dog.bark();
 function looper(arr){
   var mySum =0;
   for(var i=0; i < arr.length; i++){
-    if(arr[i]%2 !== 0) {
-      mySum += arr[i];
-    } else if (arr[i] >= 100) {
+    if(arr[i]%2 !== 0 || arr[i] >=100) {
       mySum += arr[i];
     }
   }
@@ -158,7 +154,7 @@ function pond() {
 let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck","rubberDuck", "sailorDuck"];
+let bathroomScope = ["duck","rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
 let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
@@ -172,7 +168,9 @@ let pondScope = ["duck", "realDuck"];
 //function which returns your name.
 
 function outerFn(){
-  return function() { return "madi"; }
+  return function() { 
+    return "madi"; 
+  }
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
