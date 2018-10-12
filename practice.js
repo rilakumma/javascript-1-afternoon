@@ -170,7 +170,7 @@ let pondScope = ["duck", "realDuck"];
 function outerFn(){
   return function() { 
     return "madi"; 
-  }
+  };
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
@@ -179,4 +179,4 @@ var innerFn = outerFn();
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
-var finalResult = innerFn;
+var finalResult = innerFn();
